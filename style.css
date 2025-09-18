@@ -1,92 +1,72 @@
-/* General Styles */
+/* General Page Styling */
 body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f5f7fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Container */
-.quiz-container {
-  background: white;
+/* Main Container */
+.container {
+  background: #fff;
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 350px;
-  max-width: 90%;
 }
 
-/* Heading */
-.quiz-container h1 {
+/* Question Styling */
+.quiz-box h2 {
   margin-bottom: 20px;
-  color: #222;
+  font-size: 20px;
 }
 
-/* Question */
-#question {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Options */
-#options {
+/* Options Styling */
+.options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .option {
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: 12px;
+  padding: 10px;
+  border: 2px solid #4facfe;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .option:hover {
-  background: #f0f4f8;
+  background: #f0f8ff;
 }
 
 .option.selected {
-  border-color: #4cafef;
-  background: #e6f4ff;
-  font-weight: bold;
+  background: #4facfe;
+  color: #fff;
 }
 
 /* Buttons */
-button {
-  margin-top: 20px;
-  padding: 12px 20px;
+.btn {
+  padding: 10px 20px;
   border: none;
-  border-radius: 12px;
-  background: #4cafef;
-  color: white;
-  font-size: 16px;
+  background: #4facfe;
+  color: #fff;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
-button:hover {
-  background: #399ede;
+.btn:hover {
+  background: #00c6fb;
 }
 
 /* Result Box */
-.hidden {
+.result-box.hidden {
   display: none;
-}
-
-#result-box h2 {
-  margin-bottom: 10px;
-  color: #444;
-}
-
-#score {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: bold;
 }

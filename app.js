@@ -28,6 +28,7 @@ const quizBox = document.getElementById("quiz-box");
 const scoreEl = document.getElementById("score");
 const restartBtn = document.getElementById("restart-btn");
 
+// Load a question
 function loadQuestion() {
   questionEl.textContent = questions[currentQuestion].question;
   optionsEl.innerHTML = "";
@@ -37,20 +38,31 @@ function loadQuestion() {
     const div = document.createElement("div");
     div.textContent = questions[currentQuestion].options[i];
     div.classList.add("option");
-    div.onclick = () => selectOption(div, i);
+    div.onclick = function () {
+      selectOption(div, i);
+    };
     optionsEl.appendChild(div);
   }
 }
 
+// Select an option
 function selectOption(element, index) {
   const options = document.querySelectorAll(".option");
-  options.forEach(opt => opt.classList.remove("selected"));
+  for (let i = 0; i < options.length; i++) {
+    options[i].classList.remove("selected");
+  }
   element.classList.add("selected");
   selectedOption = index;
 }
 
-nextBtn.addEventListener("click", () => {
-  if (selectedOption === null) return;
+// Next button click
+nextBtn.addEventListener("click", function () {
+  console.log("Next button clicked ✅"); // test line
+
+  if (selectedOption === null) {
+    alert("Please select an option before continuing!");
+    return;
+  }
 
   if (selectedOption === questions[currentQuestion].answer) {
     score++;
@@ -65,14 +77,17 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+// Show result
 function showResult() {
   quizBox.classList.add("hidden");
   resultBox.classList.remove("hidden");
+
   const percentage = Math.round((score / questions.length) * 100);
   scoreEl.textContent = You scored ${score} out of ${questions.length} (${percentage}%);
 }
 
-restartBtn.addEventListener("click", () => {
+// Restart quiz
+restartBtn.addEventListener("click", function () {
   currentQuestion = 0;
   score = 0;
   quizBox.classList.remove("hidden");
@@ -80,5 +95,5 @@ restartBtn.addEventListener("click", () => {
   loadQuestion();
 });
 
-// Start Quiz
+// Start quiz
 loadQuestion();
