@@ -1,32 +1,47 @@
-/* General Page Styling */
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+/* Global reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-/* Main Container */
-.container {
-  background: #fff;
+/* Main quiz box */
+.quiz-container {
+  background: #ffffff;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   width: 400px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-/* Question Styling */
-.quiz-box h2 {
+/* Title */
+.quiz-title {
   margin-bottom: 20px;
-  font-size: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-/* Options Styling */
+/* Question */
+.question {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Options */
 .options {
   display: flex;
   flex-direction: column;
@@ -35,38 +50,45 @@ body {
 }
 
 .option {
-  padding: 10px;
-  border: 2px solid #4facfe;
-  border-radius: 5px;
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .option:hover {
-  background: #f0f8ff;
-}
-
-.option.selected {
-  background: #4facfe;
-  color: #fff;
+  background: #e6f7ff;
+  border-color: #2193b0;
 }
 
 /* Buttons */
 .btn {
-  padding: 10px 20px;
+  background: #2193b0;
+  color: white;
   border: none;
-  background: #4facfe;
-  color: #fff;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 12px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 16px;
+  margin: 5px;
 }
 
 .btn:hover {
-  background: #00c6fb;
+  background: #176a81;
 }
 
-/* Result Box */
-.result-box.hidden {
+/* Result */
+.result {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Hidden utility */
+.hidden {
   display: none;
 }

@@ -7,23 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Quiz Box -->
-      <div id="quiz-box" class="quiz-box">
-        <h2 id="question">Question text</h2>
+    <div class="quiz-container">
+      <h1 class="quiz-title">🇵🇰 Pakistan Quiz</h1>
+      <div id="quiz">
+        <div id="question" class="question"></div>
         <div id="options" class="options"></div>
         <button id="next-btn" class="btn">Next</button>
+        <button id="restart-btn" class="btn hidden">Restart</button>
       </div>
-
-      <!-- Result Box -->
-      <div id="result-box" class="result-box hidden">
-        <h2>Quiz Completed!</h2>
-        <p id="score"></p>
-        <button id="restart-btn" class="btn">Restart Quiz</button>
-      </div>
+      <div id="result" class="result hidden"></div>
     </div>
 
-    <!-- ⚡ Important: script at end of body -->
-    <script src="app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
