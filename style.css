@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container */
+.quiz-container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  max-width: 90%;
+}
+
+/* Heading */
+.quiz-container h1 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Question */
+#question {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Options */
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: #f0f4f8;
+}
+
+.option.selected {
+  border-color: #4cafef;
+  background: #e6f4ff;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #4cafef;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #399ede;
+}
+
+/* Result Box */
+.hidden {
+  display: none;
+}
+
+#result-box h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+#score {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
